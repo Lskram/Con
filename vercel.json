@@ -2,7 +2,7 @@
   "buildCommand": "pip install -r requirements.txt && npm install && npm run tailwind:build && python manage.py collectstatic --noinput",
   "functions": {
     "api/index.py": {
-      "runtime": "vercel-python@3.11",
+      "runtime": "python3.11",
       "maxDuration": 30,
       "memory": 512
     }
