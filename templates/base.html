@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Profile V2{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+<header class="border-b border-slate-800">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-4">
+        <div class="flex items-center gap-2 text-xl font-semibold tracking-tight">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">PV</span>
+            <span>Profile V2</span>
+        </div>
+        <ul class="hidden items-center gap-6 text-sm font-medium md:flex">
+            <li><a class="transition hover:text-emerald-300" href="#about">About</a></li>
+            <li><a class="transition hover:text-emerald-300" href="#work">Work</a></li>
+            <li><a class="transition hover:text-emerald-300" href="#contact">Contact</a></li>
+        </ul>
+        <a class="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400" href="#contact">Get in touch</a>
+    </nav>
+</header>
+<main class="flex-1">
+    {% block content %}{% endblock %}
+</main>
+<footer class="border-t border-slate-800">
+    <div class="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <p>© {% now "Y" %} Profile V2. Crafted with Django & Tailwind.</p>
+        <div class="flex gap-4">
+            <a class="transition hover:text-emerald-300" href="https://vercel.com/" target="_blank" rel="noopener noreferrer">Vercel Ready</a>
+            <a class="transition hover:text-emerald-300" href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer">Django 5</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
