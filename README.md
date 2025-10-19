@@ -1,4 +1,4 @@
-# ProfileV2 – Django + Tailwind + Vercel Starter
+# ProfileV2 - Django + Tailwind + Vercel Starter
 
 Modern Django 5 starter prewired with Tailwind CSS, Whitenoise static handling, and a Vercel-ready serverless entry point. Ideal for a personal profile or portfolio launch.
 
@@ -23,7 +23,7 @@ python manage.py runserver
 
 ### Tailwind workflow
 
-- `npm run tailwind:watch` – rebuild CSS on file changes.
+- `npm run tailwind:watch` - rebuild CSS on file changes.
 - Source file lives in `assets/css/input.css`.
 - Generated CSS output is written to `static/css/tailwind.css` and consumed via `{% load static %}` in templates.
 
@@ -39,7 +39,7 @@ CSRF_TRUSTED_ORIGINS=https://*.vercel.app
 DATABASE_URL=sqlite:///db.sqlite3            # optional override
 ```
 
-For Vercel, add the same keys through **Project Settings → Environment Variables** and set `DEBUG=False`.
+For Vercel, add the same keys through **Project Settings -> Environment Variables** and set `DEBUG=False`.
 
 ## 3. Deployment on Vercel
 
@@ -68,9 +68,9 @@ and exposes `api/index.py` as the serverless WSGI entry point. Static assets are
 
 ## 4. Useful Extras
 
-- `git status` – confirm clean working tree before commits.
-- `python manage.py createsuperuser` – create admin user if needed.
-- `npm run build` – one-off Tailwind build (invoked automatically by Vercel).
+- `git status` - confirm clean working tree before commits.
+- `python manage.py createsuperuser` - create admin user if needed.
+- `npm run build` - one-off Tailwind build (invoked automatically by Vercel).
 
 ---
 
